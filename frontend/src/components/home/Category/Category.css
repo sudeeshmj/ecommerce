@@ -1,0 +1,11 @@
+.category-card {
+  border-color: black !important;
+  border-radius: 0 !important;
+  padding: 9px 40px !important;
+  cursor: pointer;
+  text-align: center;
+}
+.category-card .category-name {
+  font-weight: 400;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,98 @@
+.product-item {
+  cursor: pointer;
+  border: 1px solid rgba(221, 221, 221, 0.7);
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* .product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.product-item .product-item-image {
+  /* background-color: rgb(240, 243, 255); */
+  background-color: #eeeeee;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.7);
+}
+.product-item .product-item-image .list-action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.product-item:hover .list-action {
+  opacity: 1;
+}
+.product-item .product-item-image .list-action .action-text {
+  background-color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.product-item .product-item-image .list-action .action-text:hover {
+  background-color: black;
+  color: white;
+}
+.product-item .product-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.product-item:hover .product-item-image img {
+  transform: scale(1.05);
+}
+.product-item .product-item-info {
+  padding: 15px;
+}
+.product-item .product-item-info h3 {
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+.product-item .product-item-info .product-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-item .product-item-info .product-price span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+.product-item .product-item-info .product-price del {
+  font-size: 14px;
+  color: #888;
+}
+.product-item .product-item-info .product-price code {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 8px;
+  font-weight: 500;
+  font-size: 12px;
+}

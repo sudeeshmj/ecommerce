@@ -1,0 +1,11 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+    level: 6
+    ignoreErrors:
+        - '#has no return type specified.#'
+        - '#has parameter .+ with no type specified.#'
+    checkMissingIterableValueType: false

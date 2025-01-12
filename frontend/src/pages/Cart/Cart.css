@@ -1,0 +1,97 @@
+.cart-section {
+  background-color: #f1f3f6;
+  min-height: 40vw;
+  width: 100%;
+}
+
+.cart-section .product-details {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section .product-details img {
+  width: 70px;
+  height: 84px;
+}
+
+.cart-section .product-name-section h5 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.cart-section .product-name-section p {
+  font-weight: 500;
+  font-size: 14px;
+}
+.cart-section .product-total-price {
+  font-weight: 600;
+  color: black !important;
+  font-size: 16px;
+}
+
+.cart-section .form-select {
+  width: 60px;
+}
+
+.cart-section .text-danger i {
+  font-size: 1.2rem;
+}
+.cart-section .delete-icon {
+  background-color: rgb(88, 73, 73);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffff !important;
+}
+
+.cart-section .wishlist {
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.cart-section .product-price-section {
+  background-color: #ffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.cart-section .product-price-section .title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+}
+.cart-section .product-price-section hr {
+  width: 100%;
+  padding: 0px -40px;
+}
+.cart-section .product-price-section .price-display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-section .product-price-section .price h6 {
+  font-size: 14px;
+}
+.cart-section .product-price-section .place-order-btn {
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px black solid;
+  background-color: black;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.cart-section .product-price-section .total-amount h6 {
+  font-size: 16px;
+  font-weight: 600;
+}

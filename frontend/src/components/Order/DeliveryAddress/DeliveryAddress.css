@@ -1,0 +1,61 @@
+.address {
+  background-color: #ffffff;
+  padding: 10px;
+}
+.add-new-address {
+  background-color: #ffff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #b3b3b3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-new-address span {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+.address-edit-btn {
+  border: 1px dotted black;
+  background-color: #ffff !important;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black !important;
+  transition: transform 0.2s ease;
+}
+.address-edit-btn:hover {
+  background-color: black !important;
+  color: white !important;
+}
+.address-data h6 {
+  font-weight: 600;
+}
+.address-data span {
+  font-size: 14px;
+}
+.address-data p {
+  font-size: 14px;
+}
+
+/* New Address Form */
+.address-form-input {
+  line-height: 1.7 !important;
+  border-radius: 0 !important;
+}
+.address-form-input:focus {
+  border-color: rgba(0, 0, 0, 0.175) !important;
+  box-shadow: none !important;
+}
+.modal-footer {
+  border-top: none !important;
+}
+.modal-title {
+  font-size: 1rem !important;
+}
