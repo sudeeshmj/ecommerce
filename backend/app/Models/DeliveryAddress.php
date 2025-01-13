@@ -18,7 +18,7 @@ class DeliveryAddress extends Model
         "address",
         "city",
         "state_id",
-        "land_mark",
+        "landmark",
         "address_type",
         "default_address"
     ];

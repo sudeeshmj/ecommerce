@@ -11,9 +11,9 @@ class ApiResponseHelper
             'success' => true,
             'message' => $message,
         ];
-        if (!empty($data)) {
-            $response['data'] = $data;
-        }
+        if ($data !== null) {
+			$response['data'] = $data;
+		}
         return response()->json($response, $status);
     }
 

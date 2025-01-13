@@ -13,12 +13,12 @@ class OrderController extends Controller
 {
     public function fetchDeliveryAddresses(Request $request)
     {
-        $validatedData = $request->validate([
-            'customer_id' =>  'required|integer|min:1',
-        ]);
-
+        $customerId = $request->query('customer_id');
+		if (!$customerId) {
+			return ApiResponseHelper::error("Customer ID is required.",422);
+        }
         $deliveryAddress = DeliveryAddress::join('states', 'delivery_addresses.state_id', '=', 'states.id')
-            ->where('delivery_addresses.customer_id', $request->customer_id)
+            ->where('delivery_addresses.customer_id', $customerId)
             ->select(
                 'delivery_addresses.*',
                 'states.id as state_id',
@@ -35,14 +35,15 @@ class OrderController extends Controller
     public function updateDeliveryAddress(Request $request, int $id)
     {
         $validatedData = $request->validate([
-            'customer_name' => 'required|string|min:3|max:255',
+            'name' => 'required|string|min:3|max:190',
             'phone_number' => 'required|numeric|digits:10',
             'pincode' => 'required|numeric|digits:6',
-            'locality' => 'required|string|min:3|max:255',
-            'city' => 'required|string|min:2|max:255',
+            'locality' => 'required|string|min:3|max:190',
+            'city' => 'required|string|min:2|max:190',
             'state_id' => 'required|integer|exists:states,id',
-            'landmark' => 'nullable|string|max:255',
+            'landmark' => 'nullable|string|max:190',
             'address_type' => 'required|integer',
+			'default_address' => 'nullable|integer',
         ]);
 
 
@@ -61,20 +62,21 @@ class OrderController extends Controller
         // Validate the input data
         $validatedData = $request->validate([
             'customer_id' => 'required|integer|exists:customers,id',
-            'name' => 'required|string|min:3|max:255',
+            'name' => 'required|string|min:3|max:190',
             'phone_number' => 'required|numeric|digits:10',
             'pincode' => 'required|numeric|digits:6',
-            'locality' => 'required|string|min:3|max:255',
-            'address' => 'required|string|min:3|max:255',
-            'city' => 'required|string|min:2|max:255',
+            'locality' => 'required|string|min:3|max:190',
+            'address' => 'required|string|min:3|max:190',
+            'city' => 'required|string|min:2|max:190',
             'state_id' => 'required|integer|exists:states,id',
-            'landmark' => 'nullable|string|max:255',
+            'landmark' => 'nullable|string|max:190',
             'address_type' => 'required|integer',
+			'default_address' => 'nullable|integer',
         ]);
 
         $deliveryAddress = DeliveryAddress::create($validatedData);
 
-        ApiResponseHelper::success('Delivery address created successfully', 201, $deliveryAddress);
+        return ApiResponseHelper::success('Delivery address created successfully', 201, $deliveryAddress);
     }
     public function placeOrder(Request $request)
     {

@@ -23,7 +23,7 @@ class CreateDeliveryAddressesTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->unsignedBigInteger('state_id');
-            $table->string('landmark');
+            $table->string('landmark')->nullable();
             $table->integer('address_type')->comment('1=>Home,2=>Work');
             $table->integer('default_address')->nullable();
             $table->foreign('customer_id')->references('id')->on('customers');

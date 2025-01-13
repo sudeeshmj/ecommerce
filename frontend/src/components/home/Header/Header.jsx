@@ -49,26 +49,26 @@ const Header = () => {
                 <FaUser />
                 <span className="ms-2">Sudeesh M J</span>
               </Link>
-              <ul class="dropdown-menu login-dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <ul className="dropdown-menu login-dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                 <li className="dropdown">
-                  <Link class="dropdown-item">
+                  <Link className="dropdown-item">
                     <FiUser className="me-2" /> My Profile
                   </Link>
                 </li>
                 <li className="dropdown">
-                  <Link class="dropdown-item">
+                  <Link className="dropdown-item">
                     <BsBoxSeam className="me-2" /> My Orders
                   </Link>
                 </li>
 
                 <li className="dropdown">
-                  <Link class="dropdown-item">
+                  <Link className="dropdown-item">
                     <HiOutlineHome className="me-2" />
                     My Address
                   </Link>
                 </li>
                 <li className="dropdown">
-                  <Link class="dropdown-item logout-container">
+                  <Link className="dropdown-item logout-container">
                     <button className="logout-btn text-center">Logout</button>
                   </Link>
                 </li>

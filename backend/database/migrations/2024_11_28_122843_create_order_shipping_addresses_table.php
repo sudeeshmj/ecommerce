@@ -23,7 +23,7 @@ class CreateOrderShippingAddressesTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->unsignedBigInteger('state_id');
-            $table->string('landmark');
+            $table->string('landmark')->nullable();
             $table->integer('address_type')->comment('1=>Home,2=>Work');
             $table->foreign('state_id')->references('id')->on('states');
             $table->foreign('order_id')->references('id')->on('orders');
