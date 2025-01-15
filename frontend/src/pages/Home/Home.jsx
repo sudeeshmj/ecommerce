@@ -10,12 +10,13 @@ const Home = () => {
   return (
     <>
       <Banner banner={banner} />
+	  <div>
       <Category />
       <ProductList title="New Arrival" fetchUrl={requests.fetchNewArrival} wrapperClass="container my-5" />
       {/* <ProductList title="Best Seller" fetchUrl={requests.fetchBestSeller} wrapperClass="container my-5" /> */}
 
       <Banner banner={banner2} />
-
+	</div>
       {/* <ProductList title="Fiction" fetchUrl={requests.fetchFictions} wrapperClass="container my-5" />
       <ProductList title="Non Fiction" fetchUrl={requests.fetchNonFictions} wrapperClass="container my-5" /> */}
     </>
