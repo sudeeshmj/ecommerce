@@ -2,7 +2,9 @@ import React from "react";
 import "./cart.css";
 import CartItem from "../../components/Cart/CartItem";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
+  const navigate = useNavigate();
   const { cartList } = useSelector((state) => state.cart);
 
   const totalPrice = cartList.reduce((acc, item) => acc + item.price * item.count, 0);
@@ -42,7 +44,10 @@ const Cart = () => {
                     <h6>₹{totalOfferPrice}</h6>
                   </div>
                   <div className="">
-                    <button className="place-order-btn d-flex justify-content-around align-items-center">
+                    <button
+                      onClick={() => navigate("/order")}
+                      className="place-order-btn d-flex justify-content-around align-items-center"
+                    >
                       <span>Proceed to Checkout</span>
                     </button>
                   </div>

@@ -6,13 +6,12 @@ import axiosClient from "../../../api/axiosClient";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 
-const DeliveryAddress = () => {
+const DeliveryAddress = ({ selectedAddress, setSelectedAddress }) => {
   const { userInfo } = useSelector((state) => state.user);
   const [deliveryAddresses, setDeliveryAddresses] = useState([]);
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [show, setShow] = useState(false);
   const [modalMode, setModalMode] = useState("add");
-  const [selectedAddress, setSelectedAddress] = useState(null);
 
   const handleAddressChange = (addressId) => {
     setSelectedAddressId(addressId);
