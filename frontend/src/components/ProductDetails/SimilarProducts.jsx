@@ -10,6 +10,7 @@ const SimilarProducts = () => {
       <div className="author-products-container">
         <ProductList title="Best Seller" data_product={data_product} />
       </div>
+	  <div></div>
     </>
   );
 };
